@@ -1,0 +1,24 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:cmf="http://namespaces.zope.org/cmf"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="collective.pfg.report">
+
+  <includeDependencies package="." />
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <browser:resourceDirectory
+    name="collective.pfg.report"
+    directory="resources" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="collective.pfg.report"
+    directory="profile"
+    description="Data Adapter Report View for PloneFormGen"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+</configure>
